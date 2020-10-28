@@ -22,6 +22,3 @@ export default function initIrTopPage(){
      setinhaProTopo.addEventListener('click', clickToTop);
 }
 
-console.log('teste');
-
-
