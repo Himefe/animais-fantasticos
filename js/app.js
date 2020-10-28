@@ -1,4 +1,4 @@
-import initScrollToSection from './modules/scroll-suave.js';
+import ScrollSuave from './modules/scroll-suave.js';
 import initAnimaScroll from './modules/anima-scroll.js';
 import Iniciar from './modules/accordion.js';
 import activeTab from './modules/activetab.js';
@@ -11,7 +11,9 @@ import initAnimaNumeros from './modules/anima-numeros.js';
 import initFuncionamento from './modules/funcionamento.js';
 import initFetch from './modules/fetchBitcoin.js';
 
-initScrollToSection();
+const scrollSuave = new ScrollSuave('[data-anima="menu-suave"] a[href^="#"]');
+scrollSuave.init();
+
 initAnimaScroll();
 Iniciar();
 activeTab();

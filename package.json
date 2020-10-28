@@ -1,13 +1,12 @@
 {
-  "name": "fantasticos-eslint",
+  "name": "animais-fantasticos",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
-  "author": "",
+  "author": "Himefe",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -21,8 +20,6 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "jquery": "^3.5.1",
-    "lodash": "^4.17.20",
     "whatwg-fetch": "^3.4.1"
   }
 }

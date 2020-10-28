@@ -14,8 +14,8 @@ function insertAtivoMenu(){
     menuButton.classList.add('ativo')
     outsideClick(menuList, eventos, () =>{
         menuList.classList.remove('ativo');
-        menuButton.classList.remove('ativo')
+        menuButton.classList.remove('ativo');
     });   
-}
+}; 
 
 eventos.forEach(evento => menuButton.addEventListener(evento, insertAtivoMenu));

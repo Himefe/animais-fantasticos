@@ -1,27 +1,31 @@
-@import 'geral.css';
+@import "geral.css";
 .numeros-animal h3 {
-    font-size: 2rem;
-    font-family: 'Playfair Display SC';
-    margin-bottom: .5rem;
+  font-size: 2rem;
+  font-family: "Playfair Display SC";
+  margin-bottom: 0.5rem;
 }
 
 .numeros-animal span {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 1.5rem;
-    color: #E54;
-    font-weight: bold;
-
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1.5rem;
+  color: #e54;
+  font-weight: bold;
 }
 
 .numeros-grid {
-    display: grid;
-    grid-column: 2 / 4;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 30px;
-    
+  display: grid;
+  grid-column: 2 / 4;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
 
 .numeros .js [data-anima="scroll"] {
+  animation: show-right 0.5s forwards;
+}
 
-    animation: show-right .5s forwards;
+@media only screen and (max-width: 767px) {
+  .numeros-grid {
+    grid-column: 1 / 4;
+    grid-gap: 15px;
+  }
 }
