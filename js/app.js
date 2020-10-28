@@ -1,0 +1,25 @@
+import initScrollToSection from './modules/scroll-suave.js';
+import initAnimaScroll from './modules/anima-scroll.js';
+import Iniciar from './modules/accordion.js';
+import activeTab from './modules/activetab.js';
+import initModal from './modules/modal.js';
+import initIrTopPage from './modules/backtop.js';
+import initTooltip from './modules/tooltip.js';
+import initDropdownMenu from './modules/dropdown-menu.js';
+import initMenuMobile from './modules/menu-mobile.js';
+import initAnimaNumeros from './modules/anima-numeros.js';
+import initFuncionamento from './modules/funcionamento.js';
+import initFetch from './modules/fetchBitcoin.js';
+
+initScrollToSection();
+initAnimaScroll();
+Iniciar();
+activeTab();
+initModal();
+initIrTopPage();
+initTooltip();
+initDropdownMenu();
+initMenuMobile();
+initAnimaNumeros();
+initFuncionamento();
+initFetch();
