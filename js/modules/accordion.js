@@ -1,19 +1,28 @@
-export default function Iniciar() {
-    const dts = document.querySelectorAll('.faq-lista dt');
-    dts[0].classList.add('ativo');
+import initAnimaNumeros from "./anima-numeros";
 
-    dts[0].nextElementSibling.classList.add('ativo');
+export default class Accordion {
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list);
+    this.activeClass = 'ativo';
+  }
 
+  toggler(item) {
+    item.nextElementSibling.classList.toggle(this.activeClass);
+    item.classList.toggle(this.activeClass);
+  }
+  // Adiciona evento ao accordion
 
-
-    function toggler(){
-        this.nextElementSibling.classList.toggle('ativo');
-        this.classList.toggle('ativo');
-        console.log(this);
-    }
-
-    dts.forEach((item) => {
-    item.addEventListener('click', toggler);
+  addAccordionEvent() {
+    this.accordionList.forEach((item) => {
+      item.addEventListener('click', () => this.toggler(item));
     });
-    
+  }
+  // Iniciar Função
+
+  init() {
+    if (this.accordionList.length) {
+      this.toggler(this.accordionList[0]);
+      this.addAccordionEvent();
+    }
+  }
 }
