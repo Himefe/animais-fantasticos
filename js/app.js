@@ -1,7 +1,6 @@
 import ScrollSuave from './modules/scroll-suave.js';
-
 import Accordion from './modules/accordion.js';
-import activeTab from './modules/activetab.js';
+import TabNav from './modules/activetab.js';
 import initModal from './modules/modal.js';
 import initIrTopPage from './modules/backtop.js';
 import initTooltip from './modules/tooltip.js';
@@ -18,7 +17,9 @@ scrollSuave.init();
 const accordion = new Accordion('[data-anima="accordion"] dt');
 accordion.init();
 
-activeTab();
+const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
+tabNav.init();
+
 initModal();
 initIrTopPage();
 initTooltip();
