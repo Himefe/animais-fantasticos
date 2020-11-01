@@ -23,8 +23,6 @@ tabNav.init();
 const modal = new Modal('[data-modal="container"]', '[data-modal="abrir"]', '[data-modal="fechar"]');
 modal.init(); 
 
-console.log('e ai');
-
 initIrTopPage();
 initTooltip();
 initDropdownMenu();
