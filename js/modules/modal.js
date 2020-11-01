@@ -29,5 +29,6 @@ export default class Modal {
     if (this.modalContainer && this.modalAbrir && this.modalFechar) {
       this.addEventModal();
     }
+    return this;
   }
 }
