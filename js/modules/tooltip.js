@@ -9,11 +9,15 @@ export default class Tooltip {
   // Move o tooltip de acordo com a posição do mouse
 
   onMouseMove(event) {
+    const imgmapa = document.querySelector('.mapa img');
     this.tooltipBox.style.top = `${event.pageY + 20}px`;
-    if (event.pageX + 190 > window.innerWidth - 300) {
-      this.tooltipBox.style.left = `${event.pageX - 190}px`;
-    } else {
-      this.tooltipBox.style.left = `${event.pageX + 20}px`;
+    if (event.pageX - 166 > imgmapa.getBoundingClientRect().width) {
+      this.tooltipBox.style.left = `${event.pageX - 166}px`;
+    } else if (event.pageX + 166 > window.innerWidth) {
+      this.tooltipBox.style.left = `${event.pageX - 166}px`
+    }
+    else {
+      this.tooltipBox.style.left = `${event.pageX + 20}px`
     }
   }
 
