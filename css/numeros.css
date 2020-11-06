@@ -19,7 +19,7 @@
   grid-gap: 30px;
 }
 
-.numeros .js [data-anima="scroll"] {
+.js [data-anima="scroll"].ativo {
   animation: show-right 0.5s forwards;
 }
 

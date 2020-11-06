@@ -2,13 +2,14 @@ export default function initAnimaScroll() {
     const sections = document.querySelectorAll('[data-anima="scroll"]');
     function animaScroll(){
         sections.forEach((section) =>{
-            const sectionTop = section.getBoundingClientRect().top - window.innerHeight * 0.6;
-            if (sectionTop < 0) {
+            const sectionTop = section.getBoundingClientRect().top;
+            const sectionVisible = (sectionTop - (window.innerHeight * 0.6)) < 0;
+            if (sectionVisible) {
                 section.classList.add('ativo');
             }
         });
     }
-    sections[0].classList.add('ativo');
+    animaScroll();
     
     window.addEventListener('scroll', animaScroll); 
 }
