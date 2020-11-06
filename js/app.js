@@ -6,10 +6,12 @@ import initIrTopPage from './modules/backtop.js';
 import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
-import initAnimaNumeros from './modules/anima-numeros.js';
 import initFuncionamento from './modules/funcionamento.js';
 import initFetch from './modules/fetchBitcoin.js';
 import initAnimaScroll from './modules/anima-scroll.js';
+import initFetchAnimais from './modules/fetchAnimais.js';
+
+
 
 const scrollSuave = new ScrollSuave('[data-anima="menu-suave"] a[href^="#"]');
 scrollSuave.init();
@@ -29,7 +31,8 @@ tooltip.init();
 initIrTopPage();
 initDropdownMenu();
 initMenuMobile();
-initAnimaNumeros();
 initFuncionamento();
 initFetch();
 initAnimaScroll();
+initFetchAnimais(); 
+
