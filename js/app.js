@@ -10,6 +10,8 @@ import initFuncionamento from './modules/funcionamento.js';
 import initFetch from './modules/fetchBitcoin.js';
 import initAnimaScroll from './modules/anima-scroll.js';
 import initFetchAnimais from './modules/fetchAnimais.js';
+import criarAnimais from './modules/fetchAnimais.js';
+import fetchAnimais from './modules/fetchAnimais.js';
 
 
 
@@ -34,5 +36,5 @@ initMenuMobile();
 initFuncionamento();
 initFetch();
 initAnimaScroll();
-initFetchAnimais(); 
+fetchAnimais('../animaisapi.json', '.numeros-grid');
 
