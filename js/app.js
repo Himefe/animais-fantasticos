@@ -36,5 +36,5 @@ fetchBitcoin.init();
 
 initAnimaScroll();
 
-fetchAnimais('../animaisapi.json', '.numeros-grid');
+fetchAnimais('animaisapi.json', '.numeros-grid');
 
