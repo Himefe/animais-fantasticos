@@ -11,8 +11,6 @@ import FetchBitcoin from './modules/fetchBitcoin.js';
 import initAnimaScroll from './modules/anima-scroll.js';
 import fetchAnimais from './modules/fetchAnimais.js';
 
-
-
 const scrollSuave = new ScrollSuave('[data-anima="menu-suave"] a[href^="#"]');
 scrollSuave.init();
 
@@ -35,6 +33,7 @@ initFuncionamento();
 
 const fetchBitcoin = new FetchBitcoin('https://blockchain.info/ticker', '.bitcoin');
 fetchBitcoin.init();
+
 initAnimaScroll();
 fetchAnimais('../animaisapi.json', '.numeros-grid');
 

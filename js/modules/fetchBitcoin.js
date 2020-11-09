@@ -1,7 +1,7 @@
 export default class FetchBitcoin {
   constructor(url, target) {
     this.url = url;
-    this.divBitcoin = document.querySelector(target);
+    this.target = document.querySelector(target);
   }
 
   async bitcoinNumber() {
