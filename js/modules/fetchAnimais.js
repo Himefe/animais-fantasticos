@@ -22,7 +22,7 @@ export default function fetchAnimais(url, target) {
   }
 
   // Pegando animaisapi.json utilizando Fetch
-  async function criarAnimais(url) {
+  async function criarAnimais() {
     try {
       const animaisResponse = await fetch(url);
       const animaisJson = await animaisResponse.json();
@@ -33,5 +33,5 @@ export default function fetchAnimais(url, target) {
     }
   }
 
-  criarAnimais('../../animaisapi.json');
+  return criarAnimais();
 }

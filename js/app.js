@@ -35,5 +35,6 @@ const fetchBitcoin = new FetchBitcoin('https://blockchain.info/ticker', '.bitcoi
 fetchBitcoin.init();
 
 initAnimaScroll();
+
 fetchAnimais('../animaisapi.json', '.numeros-grid');
 
