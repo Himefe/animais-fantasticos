@@ -3,7 +3,7 @@ export default class AnimaNumeros {
     this.numeros = document.querySelectorAll(numeros);
     this.observerTarget = document.querySelector(observeTarget);
     this.classObserver = classObserver;
-    this.handleMutation = this.handleMutation.bind(this);
+    
   }
 
   // Incrementa os numeros ao data-numero

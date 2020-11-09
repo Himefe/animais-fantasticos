@@ -7,10 +7,8 @@ import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFetch from './modules/fetchBitcoin.js';
+import FetchBitcoin from './modules/fetchBitcoin.js';
 import initAnimaScroll from './modules/anima-scroll.js';
-import initFetchAnimais from './modules/fetchAnimais.js';
-import criarAnimais from './modules/fetchAnimais.js';
 import fetchAnimais from './modules/fetchAnimais.js';
 
 
@@ -34,7 +32,9 @@ initIrTopPage();
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-initFetch();
+
+const fetchBitcoin = new FetchBitcoin('https://blockchain.info/ticker', '.bitcoin');
+fetchBitcoin.init();
 initAnimaScroll();
 fetchAnimais('../animaisapi.json', '.numeros-grid');
 

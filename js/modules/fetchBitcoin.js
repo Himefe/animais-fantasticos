@@ -1,22 +1,16 @@
- export default function initFetch(){
+export default class FetchBitcoin {
+  constructor(url, target) {
+    this.url = url;
+    this.divBitcoin = document.querySelector(target);
+  }
 
- }
- const spanBit = document.querySelector('.bitcoin');
+  async bitcoinNumber() {
+    const response = await fetch(this.url);
+    const jsonResponse = await response.json();
+    this.target.innerText = (1000 / jsonResponse.BRL.buy).toFixed(4);
+  }
 
-
-
-     function bitcoinNumber(){
-         fetch('https://blockchain.info/ticker')
-         .then(r => r.json())
-         .then(btc => {
-             spanBit.innerText = btc.BRL.buy;
-         })
-     }
-
- setInterval(bitcoinNumber, 30000)
-
-
-
-
-
-
+  init() {
+    this.bitcoinNumber();
+  }
+}
