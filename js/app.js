@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import initIrTopPage from "./modules/backtop.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import FetchBitcoin from "./modules/fetchBitcoin.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
@@ -37,7 +37,9 @@ initIrTopPage();
 const dropDownMenu = new DropdownMenu("[data-dropdown]");
 dropDownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="list"]', '[data-menu="button"]');
+menuMobile.init();
+
 initFuncionamento();
 
 const fetchBitcoin = new FetchBitcoin(
