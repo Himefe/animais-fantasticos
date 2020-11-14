@@ -4,11 +4,10 @@ import TabNav from "./modules/activetab.js";
 import Modal from "./modules/modal.js";
 import initIrTopPage from "./modules/backtop.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
+import DropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
 import FetchBitcoin from "./modules/fetchBitcoin.js";
-import initAnimaScroll from "./modules/anima-scroll.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import AnimaScroll from "./modules/anima-scroll.js";
 
@@ -35,7 +34,9 @@ const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
 initIrTopPage();
-initDropdownMenu();
+const dropDownMenu = new DropdownMenu("[data-dropdown]");
+dropDownMenu.init();
+
 initMenuMobile();
 initFuncionamento();
 
