@@ -15,7 +15,6 @@ export default class AnimaScroll {
         offset: offset - this.windowMetade,
       };
     });
-    console.log(this.distance);
   }
 
   // Verifica se a distância do item é maior que a do PageYOfsset e adiciona classe ativo
