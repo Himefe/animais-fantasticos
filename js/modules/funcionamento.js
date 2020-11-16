@@ -1,23 +1,50 @@
-export default function initFuncionamento(){
-    
-}
-    
+export default class Funcionamento {
+  constructor(target) {
+    this.target = document.querySelector(target);
+  }
 
-const funcionamento = document.querySelector('[data-semana]');
-const diasSemana = funcionamento.dataset.semana.split(',').map(Number);
-const horarioSemana = funcionamento.dataset.horario.split(',').map(Number);
+  // Pega o dia/hora de funcionamento da "loja"
 
+  getFuncionamento() {
+    this.diasSemana = this.target.dataset.semana.split(",").map(Number);
+    this.horarioSemana = this.target.dataset.horario.split(",").map(Number);
+  }
 
+  // Pega o horário atual 
 
-const dataAgora = new Date();
-const diaAgora = dataAgora.getDay();
-const horarioAgora = dataAgora.getHours();
-const semanaAberto = diasSemana.indexOf(diaAgora) !== -1;
+  getActualDate() {
+    this.dataAgora = new Date();
+    this.diaAgora = this.dataAgora.getDay();
+    this.horarioAtual = this.dataAgora.getUTCHours() - 3;
+  }
 
-const horarioAberto = horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1];
+  // Função que vê se o horário bate com o funcionamento da "loja"
 
-if (semanaAberto && horarioAberto){
-    funcionamento.classList.add('aberto');
-} else {
-    funcionamento.classList.remove('aberto');
+  isOpened() {
+    const semanaAberto = this.diasSemana.indexOf(this.diaAgora) !== -1;
+    const horarioAberto = (this.horarioAtual >= this.horarioSemana[0]
+      && this.horarioAtual < this.horarioSemana[1]);
+    return semanaAberto && horarioAberto;
+  }
+
+  // Inicia a função isOpened, colocando a classe de aberto e removendo.
+
+  ativaOpen() {
+    if (this.isOpened()) {
+      this.target.classList.add('aberto');
+    } else {
+      this.target.classList.remove('aberto');
+    }
+  }
+
+  // Inicia a função por inteira.
+
+  init() {
+    if (this.target) {
+      this.getFuncionamento();
+      this.getActualDate();
+      this.ativaOpen();
+    }
+    return this;
+  }
 }

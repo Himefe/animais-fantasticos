@@ -6,7 +6,7 @@ import initIrTopPage from "./modules/backtop.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
-import initFuncionamento from "./modules/funcionamento.js";
+import Funcionamento from "./modules/funcionamento.js";
 import FetchBitcoin from "./modules/fetchBitcoin.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import AnimaScroll from "./modules/anima-scroll.js";
@@ -40,7 +40,8 @@ dropDownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="list"]', '[data-menu="button"]');
 menuMobile.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento("[data-semana]");
+funcionamento.init();
 
 const fetchBitcoin = new FetchBitcoin(
   "https://blockchain.info/ticker",
