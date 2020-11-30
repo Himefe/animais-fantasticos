@@ -10,6 +10,9 @@ import Funcionamento from "./modules/funcionamento.js";
 import FetchBitcoin from "./modules/fetchBitcoin.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import AnimaScroll from "./modules/anima-scroll.js";
+import { SlideNav } from "./modules/slide.js";  
+
+
 
 const scrollSuave = new ScrollSuave('[data-anima="menu-suave"] a[href^="#"]');
 scrollSuave.init();
@@ -53,3 +56,9 @@ const animaScroll = new AnimaScroll('[data-anima="scroll"]');
 animaScroll.init();
 
 fetchAnimais("animaisapi.json", ".numeros-grid");
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+
+slide.init();
+slide.changeSlide(0);
+slide.addControl('.custom-control');
