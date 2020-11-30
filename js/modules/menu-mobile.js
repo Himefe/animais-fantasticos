@@ -15,7 +15,8 @@ export default class MenuMobile {
 
   // Adiciona a classe ativo ao menuList e menuButton, e remove de acordo com a função outsideClick
 
-  insertAtivoMenu() {
+  insertAtivoMenu(event) {
+    event.preventDefault();
     this.menuList.classList.add(this.activeClass);
     this.menuButton.classList.add(this.activeClass);
     outsideClick(this.menuList, this.events, () => {
