@@ -4,6 +4,7 @@ export default class MenuMobile {
   constructor(menuList, menuButton, events) {
     this.menuList = document.querySelector(menuList);
     this.menuButton = document.querySelector(menuButton);
+    // eslint-disable-next-line no-unused-expressions
     events === undefined
       ? (this.events = ["touchstart", "click"])
       : (this.events = events);
@@ -28,7 +29,7 @@ export default class MenuMobile {
   // Inicia a função insertAtivoMenu ao click do menuButton
 
   addAtivoMenuEvent() {
-    this.events.forEach(evento => {
+    this.events.forEach((evento) => {
       this.menuButton.addEventListener(evento, this.insertAtivoMenu);
     });
   }
